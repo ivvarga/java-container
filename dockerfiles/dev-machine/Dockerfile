@@ -6,7 +6,7 @@ ENV M2_HOME=/usr/lib/apache-maven-$MAVEN_VERSION
 ENV PATH=${PATH}:${M2_HOME}/bin
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-    apk add --update curl ca-certificates bash openssh unzip openssl shadow && \
+    apk add --update curl ca-certificates bash openssh unzip openssl shadow sudo && \
     cd /tmp && \
     wget "http://ftp.carnet.hr/misc/apache/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz" && \
     tar -xzf "apache-maven-$MAVEN_VERSION-bin.tar.gz" && \
