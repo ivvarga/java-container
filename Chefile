@@ -1,0 +1,18 @@
+workspace.commands[0].type="maven"
+workspace.commands[0].name="build"
+workspace.commands[0].commandLine="mvn clean install"
+workspace.projects[0].type="java"
+workspace.name="java-container"
+workspace.ram=1536
+workspace.runtime.docker.composefile=`
+version: 2
+services:
+  neo4j:
+    image: neo4j:3.1.2
+    environment:
+      - NEO4J_AUTH=none
+  dev-machine:
+    image: ivvarga/java-container-dev-machine
+    depends_on:
+      - neo4j
+`
