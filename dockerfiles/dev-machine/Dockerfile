@@ -1,14 +1,14 @@
 FROM openjdk:8u131-jdk-alpine
 
-ENV LANG=C.UTF-8
-ENV MAVEN_VERSION=3.3.9
+ENV LANG=C.UTF-8 \
+    MAVEN_VERSION=3.3.9
 ENV M2_HOME=/usr/lib/apache-maven-$MAVEN_VERSION
 ENV PATH=${PATH}:${M2_HOME}/bin
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk add --update curl ca-certificates bash openssh unzip openssl shadow && \
     cd /tmp && \
-    wget -q "http://apache.ip-connect.vn.ua/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz" && \
+    wget "http://ftp.carnet.hr/misc/apache/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz" && \
     tar -xzf "apache-maven-$MAVEN_VERSION-bin.tar.gz" && \
     mv "/tmp/apache-maven-$MAVEN_VERSION" "/usr/lib" && \
     echo "%root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
