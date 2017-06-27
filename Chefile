@@ -1,13 +1,14 @@
-workspace.commands[0].type="maven"
-workspace.commands[0].name="build"
-workspace.commands[0].commandLine="clean install"
-
-workspace.projects[0].type="maven"
+workspace.projects[0].type="blank"
 
 workspace.projects[1].name = "rafabene"
 workspace.projects[1].source.type = "git"
-workspace.projects[1].source.location = "https://github.com/redhat-developer-demos/java-container"
+workspace.projects[1].source.location = "https://github.com/ivvarga/java-container-1"
 workspace.projects[1].type = "maven"
+
+workspace.projects[2].name = "arungupta"
+workspace.projects[2].source.type = "git"
+workspace.projects[2].source.location = "https://github.com/ivvarga/docker-java-multistage"
+workspace.projects[2].type = "maven"
 
 workspace.name="java-container"
 workspace.ram=4096
