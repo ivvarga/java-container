@@ -29,8 +29,7 @@ INFO: (che dir): Connect to http://localhost:8080/dashboard/#/ide/che/local
 
 ### Close the project creating a snapshot of the workspace...
 ```
-$ docker run -it --rm -v //var/run/docker.sock:/var/run/docker.sock -v ///c/myworkspace/java-container/.che/cli:/data -v ///c/myworkspace/java-container:/chedir eclips
-e/che:5.13.0 dir down
+$ docker run -it --rm -v //var/run/docker.sock:/var/run/docker.sock -v ///c/myworkspace/java-container/.che/cli:/data -v ///c/myworkspace/java-container:/chedir eclipse/che:5.13.0 dir down
 INFO: (che cli): 5.13.0 - using docker 17.06.0-ce-rc5 / docker4windows
 INFO: (che dir): Search for a running Eclipse Che...
 INFO: (che dir): Found running Eclipse Che at http://localhost:8080
