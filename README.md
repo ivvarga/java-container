@@ -2,7 +2,7 @@
 
 ## Project setup
 
-* Docker for Windows (Shared C drive; )
+* Docker for Windows (Shared C drive)
 * Git Bash (Use Windows' default console window)
 * Eclipse Che
 
