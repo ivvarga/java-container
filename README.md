@@ -6,7 +6,7 @@
 * Git Bash (Use Windows' default console window)
 * Eclipse Che
 
-### Clone the project your workspace...
+### Clone the project into your workspace...
 ```
 $ mkdir /c/myworkspace
 $ cd /c/myworkspace
