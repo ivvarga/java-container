@@ -11,7 +11,7 @@ workspace.projects[2].source.location = "https://github.com/ivvarga/docker-java-
 workspace.projects[2].type = "maven"
 
 workspace.name="java-container"
-workspace.ram=4096
+workspace.ram=1536
 workspace.runtime.docker.composefile=`
 version: 2
 services:
